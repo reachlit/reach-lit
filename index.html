@@ -1,154 +1,114 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8" />
   <title>Reach-Lit — Coming Online</title>
-  <meta name="description" content="Reach-Lit is live — temporary page while setup completes." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
   <style>
-    :root{
-      --bg1:#0b1220;
-      --bg2:#0f1b33;
-      --card:rgba(255,255,255,.08);
-      --stroke:rgba(255,255,255,.14);
-      --text:rgba(255,255,255,.92);
-      --muted:rgba(255,255,255,.72);
-      --accent:#9eb3d1;
+    * {
+      box-sizing: border-box;
     }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      min-height:100svh;
-      color:var(--text);
-      font:16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-      background:
-        radial-gradient(1100px 600px at 20% 10%, rgba(158,179,209,.35), transparent 55%),
-        radial-gradient(900px 500px at 80% 20%, rgba(124,92,255,.25), transparent 60%),
-        linear-gradient(180deg, var(--bg1), var(--bg2));
-      display:grid;
-      place-items:center;
-      padding:28px;
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #ffffff;
+      font-family: 'Inter', sans-serif;
+      text-align: center;
+      padding: 40px;
     }
-    .wrap{width:min(920px,100%)}
-    .card{
-      border:1px solid var(--stroke);
-      background:var(--card);
-      backdrop-filter: blur(10px);
-      border-radius:20px;
-      padding:28px;
-      box-shadow:0 18px 50px rgba(0,0,0,.35);
-      position:relative;
-      overflow:hidden;
+
+    .card {
+      max-width: 700px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 18px;
+      padding: 50px 40px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 30px 60px rgba(0,0,0,0.35);
     }
-    .badge{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      padding:10px 14px;
-      border-radius:999px;
-      border:1px solid var(--stroke);
-      background:rgba(0,0,0,.18);
-      color:var(--muted);
-      font-weight:600;
-      letter-spacing:.2px;
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 10px;
+      letter-spacing: 0.5px;
     }
-    .dot{
-      width:10px;height:10px;border-radius:50%;
-      background: #38d39f;
-      box-shadow:0 0 0 6px rgba(56,211,159,.15);
+
+    .rocket {
+      font-size: 2.2rem;
     }
-    h1{
-      margin:16px 0 10px;
-      font-size:clamp(30px, 4vw, 44px);
-      line-height:1.12;
-      letter-spacing:-.l4px;
+
+    .subtitle {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      margin-bottom: 30px;
     }
-    p{margin:0 0 14px;color:var(--muted);font-size:17px}
-    .quote{
-      margin-top:18px;
-      padding:18px 18px 18px 16px;
-      border-left:4px solid var(--accent);
-      border-radius:14px;
-      background:rgba(255,255,255,.06);
+
+    .message {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      opacity: 0.95;
+      margin-bottom: 35px;
     }
-    .quote p{color:rgba(255,255,255,.86)}
-    .names{
-      margin-top:10px;
-      color:rgba(255,255,255,.92);
-      font-weight:700;
+
+    .highlight {
+      font-weight: 500;
     }
-    .grid{
-      margin-top:18px;
-      display:grid;
-      grid-template-columns: 1fr;
-      gap:12px;
+
+    .signature {
+      margin-top: 25px;
+      font-size: 0.95rem;
+      opacity: 0.85;
     }
-    .mini{
-      border:1px solid var(--stroke);
-      background:rgba(0,0,0,.18);
-      border-radius:16px;
-      padding:14px 16px;
-      color:var(--muted);
-      font-size:14px;
+
+    .names {
+      margin-top: 8px;
+      font-weight: 500;
+      letter-spacing: 0.4px;
     }
-    .mini strong{color:rgba(255,255,255,.9)}
-    .footer{
-      margin-top:16px;
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      align-items:center;
-      justify-content:space-between;
-      color:rgba(255,255,255,.65);
-      font-size:13px;
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.8rem;
+      opacity: 0.6;
     }
-    .pill{
-      padding:8px 12px;
-      border:1px solid var(--stroke);
-      border-radius:999px;
-      background:rgba(255,255,255,.06);
-    }
-    a{color:var(--accent);text-decoration:none}
-    a:hover{text-decoration:underline}
   </style>
 </head>
-
 <body>
-  <main class="wrap">
-    <section class="card">
-      <div class="badge"><span class="dot"></span>Reach-Lit is Live (setup in progress)</div>
 
-      <h1>Reach Lit 🚀</h1>
-      <p>The beginning of <strong>Reach-Lit</strong> is officially live — we’re just finishing the final setup.</p>
+  <div class="card">
+    <h1>Reach-Lit <span class="rocket">🚀</span></h1>
+    <div class="subtitle">The beginning is live</div>
 
-      <div class="quote">
-        <p>
-          Shaikha &amp; Fajer… here you go — the beginning of <strong>Reach-Lit</strong> is officially LIVE 🚀
-          <br><br>
-          And of course, this couldn’t happen without the one and only, the forever go-to, the most and the best —
-          the person you literally can’t take one step without going back to:
-        </p>
-        <div class="names">Bader Bouresly (Bo Nabooli) 🤝🔥</div>
-      </div>
+    <div class="message">
+      Shaikha and Fajer — here you go.  
+      <br /><br />
+      The beginning of <span class="highlight">Reach-Lit</span> is now live,  
+      with the help of the only one, forever the most,  
+      and the best of all —  
+      the one you never take a step without first going back to.
+      <br /><br />
+      <span class="highlight">Bader Bouresly  
+      <br />Bo Nabooli</span>
+    </div>
 
-      <div class="grid">
-        <div class="mini">
-          <strong>What’s happening?</strong> DNS/SSL updates are still propagating, so you may briefly see “Not Secure” or redirects.
-        </div>
-        <div class="mini">
-          <strong>Next:</strong> Once everything finishes, we’ll switch this temporary page to the full website.
-        </div>
-      </div>
+    <div class="signature">
+      Built with intention.  
+      <div class="names">More coming soon.</div>
+    </div>
 
-      <div class="footer">
-        <span class="pill">© <span id="year"></span> Reach-Lit</span>
-        <span>Built on GitHub Pages • Secured via Cloudflare</span>
-      </div>
-    </section>
-  </main>
+    <footer>
+      © Reach-Lit
+    </footer>
+  </div>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
